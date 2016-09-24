@@ -1,5 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App.jsx';
+import MotelActions from './actions/MotelActions';
+import Motelgrid from './components/Motelgrid.jsx'
 
-ReactDOM.render(<App />, document.getElementById('app'));
+
+setInterval(function(){ MotelActions.fetchlist(); }, 5000);
+
+ReactDOM.render(<Motelgrid />, document.getElementById('app'));
